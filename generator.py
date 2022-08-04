@@ -16,3 +16,18 @@ counter = count(1)
 
 for item in islice(counter, 10):
     print(item)
+
+    
+    # Generators - basic example #2
+
+from itertools import islice, cycle
+from string import ascii_lowercase
+
+def alpha():
+    yield from cycle(ascii_lowercase)
+
+
+for item in islice(alpha(), 26):
+    print(item)
+
+    
