@@ -18,7 +18,7 @@ for item in islice(counter, 10):
     print(item)
 
     
-    # Generators - basic example #2
+# Generators - basic example #2
 
 from itertools import islice, cycle
 from string import ascii_lowercase
@@ -31,3 +31,17 @@ for item in islice(alpha(), 26):
     print(item)
 
     
+# Iterators = basic example #1
+
+from itertools import islice, cycle
+from string import ascii_lowercase
+
+arr = iter(range(1,11))
+
+for _ in range(5):
+    print(next(arr))
+
+print("stop")
+
+for _ in range(5):
+    print(next(arr))
