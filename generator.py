@@ -45,3 +45,17 @@ print("stop")
 
 for _ in range(5):
     print(next(arr))
+
+    
+    
+# Another generator
+
+!pip install IteratorAlgorithms
+from random import randint
+from IteratorAlgorithms import generate
+
+d100 = generate(randint, 1, 100)
+for index, roll in enumerate(d100, 1):
+    print(index, roll)
+    if index >= 10:
+        break
